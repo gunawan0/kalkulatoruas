@@ -147,9 +147,19 @@ int pilih;
 
         btnkurang.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnkurang.setText("-");
+        btnkurang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnkurangActionPerformed(evt);
+            }
+        });
 
         btntambah.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btntambah.setText("+");
+        btntambah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btntambahActionPerformed(evt);
+            }
+        });
 
         btnbagi.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnbagi.setText("/");
@@ -172,6 +182,11 @@ int pilih;
 
         btnclear.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnclear.setText("C");
+        btnclear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnclearActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -330,6 +345,31 @@ angka="";
 pilih=4;
 
     }//GEN-LAST:event_btnbagiActionPerformed
+
+    private void btnkurangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkurangActionPerformed
+       angka1=Double.parseDouble(angka);
+Layar.setText("-");
+angka="";
+pilih=2;
+
+    }//GEN-LAST:event_btnkurangActionPerformed
+
+    private void btntambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntambahActionPerformed
+      angka1=Double.parseDouble(angka);
+Layar.setText("+");
+angka="";
+pilih=1;
+
+    }//GEN-LAST:event_btntambahActionPerformed
+
+    private void btnclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnclearActionPerformed
+        Layar.setText("");
+angka1=0.0;
+angka2=0.0;
+jumlah=0.0;
+angka="";
+
+    }//GEN-LAST:event_btnclearActionPerformed
 
     /**
      * @param args the command line arguments
