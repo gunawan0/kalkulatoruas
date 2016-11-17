@@ -88,9 +88,19 @@ int pilih;
 
         btn8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btn8.setText("8");
+        btn8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn8ActionPerformed(evt);
+            }
+        });
 
         btn7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btn7.setText("7");
+        btn7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn7ActionPerformed(evt);
+            }
+        });
 
         btn6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btn6.setText("6");
@@ -124,6 +134,11 @@ int pilih;
 
         btn9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btn9.setText("9");
+        btn9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn9ActionPerformed(evt);
+            }
+        });
 
         btnkurang.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnkurang.setText("-");
@@ -230,11 +245,13 @@ int pilih;
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
-        // TODO add your handling code here:
+        angka+="6";
+    Layar.setText(angka);
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
-        // TODO add your handling code here:
+        angka+="0";
+    Layar.setText(angka);
     }//GEN-LAST:event_btn0ActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
@@ -261,6 +278,21 @@ int pilih;
         angka+="5";
     Layar.setText(angka);
     }//GEN-LAST:event_btn5ActionPerformed
+
+    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
+        angka+="7";
+    Layar.setText(angka);
+    }//GEN-LAST:event_btn7ActionPerformed
+
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
+      angka+="8";
+    Layar.setText(angka);
+    }//GEN-LAST:event_btn8ActionPerformed
+
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
+       angka+="9";
+    Layar.setText(angka);
+    }//GEN-LAST:event_btn9ActionPerformed
 
     /**
      * @param args the command line arguments
