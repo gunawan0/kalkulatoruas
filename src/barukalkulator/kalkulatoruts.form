@@ -225,8 +225,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="."/>
+        <Property name="text" type="java.lang.String" value=","/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnkomaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn0">
       <Properties>
@@ -273,6 +276,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="/"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnbagiActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnkali">
       <Properties>
@@ -281,6 +287,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="X"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnkaliActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnhasil">
       <Properties>

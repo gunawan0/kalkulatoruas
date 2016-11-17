@@ -122,7 +122,12 @@ int pilih;
         btnnin.setText("+/-");
 
         btnkoma.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        btnkoma.setText(".");
+        btnkoma.setText(",");
+        btnkoma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnkomaActionPerformed(evt);
+            }
+        });
 
         btn0.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btn0.setText("0");
@@ -148,9 +153,19 @@ int pilih;
 
         btnbagi.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnbagi.setText("/");
+        btnbagi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbagiActionPerformed(evt);
+            }
+        });
 
         btnkali.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnkali.setText("X");
+        btnkali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnkaliActionPerformed(evt);
+            }
+        });
 
         btnhasil.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnhasil.setText("=");
@@ -293,6 +308,28 @@ int pilih;
        angka+="9";
     Layar.setText(angka);
     }//GEN-LAST:event_btn9ActionPerformed
+
+    private void btnkomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkomaActionPerformed
+        angka += ",";
+Layar.setText(angka);
+
+    }//GEN-LAST:event_btnkomaActionPerformed
+
+    private void btnkaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkaliActionPerformed
+       angka1=Double.parseDouble(angka);
+Layar.setText("*");
+angka="";
+pilih=3;
+
+    }//GEN-LAST:event_btnkaliActionPerformed
+
+    private void btnbagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbagiActionPerformed
+       angka1=Double.parseDouble(angka);
+Layar.setText("/");
+angka="";
+pilih=4;
+
+    }//GEN-LAST:event_btnbagiActionPerformed
 
     /**
      * @param args the command line arguments
