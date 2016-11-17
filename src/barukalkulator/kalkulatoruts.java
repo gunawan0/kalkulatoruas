@@ -120,6 +120,11 @@ int pilih;
 
         btnnin.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnnin.setText("+/-");
+        btnnin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnninActionPerformed(evt);
+            }
+        });
 
         btnkoma.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnkoma.setText(",");
@@ -179,6 +184,11 @@ int pilih;
 
         btnhasil.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnhasil.setText("=");
+        btnhasil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnhasilActionPerformed(evt);
+            }
+        });
 
         btnclear.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnclear.setText("C");
@@ -370,6 +380,47 @@ jumlah=0.0;
 angka="";
 
     }//GEN-LAST:event_btnclearActionPerformed
+
+    private void btnhasilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhasilActionPerformed
+        
+    switch(pilih) {
+        case 1:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 + angka2;
+            angka = Double.toString(jumlah);
+            Layar.setText(angka);
+            break;
+            
+            case 2:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 - angka2;
+            angka = Double.toString(jumlah);
+            Layar.setText(angka);
+            break;
+        case 3:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 * angka2;
+            angka = Double.toString(jumlah);
+            Layar.setText(angka);
+            break;
+        case 4:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 / angka2;
+            angka = Double.toString(jumlah);
+            Layar.setText(angka);
+            break;
+            default:
+            break;
+} 
+
+
+
+    }//GEN-LAST:event_btnhasilActionPerformed
+
+    private void btnninActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnninActionPerformed
+        Layar.setText("-");
+angka="";
+    }//GEN-LAST:event_btnninActionPerformed
 
     /**
      * @param args the command line arguments
